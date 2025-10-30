@@ -22,7 +22,6 @@ public class DashboardPage extends LoggedInPage {
     public void goTo() {
         Allure.step("Opening Dashboard page");
         safeNavigate(pageURL);
-        takeScreenshot("dashboard-navigate");
     }
 
     public List<Locator> getCardsFromGrid(){

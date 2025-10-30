@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f03435-b7b4-428f-a591-d504ddf56c8c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/test-allure.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProjectsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProjectsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/TestCasesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/TestCasesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +57,7 @@
     "TestNG.DashboardTests.executor": "Run",
     "TestNG.DashboardTests.verifyAllLinksInCardGrid.executor": "Run",
     "TestNG.LoginTests.executor": "Run",
+    "TestNG.LoginTests.failingTest.executor": "Run",
     "TestNG.LoginTests.testValidLogin.executor": "Run",
     "TestNG.ProjectsPageTests.executor": "Run",
     "TestNG.ProjectsPageTests.testAddAllPersonsIntoFirstProject.executor": "Run",
@@ -61,7 +69,7 @@
     "TestNG.TestCasesPageTests.testDeleteAllTestCases.executor": "Run",
     "TestNG.TestCasesPageTests.verifyCreateNewTestCase.executor": "Run",
     "TestNG.tests.executor": "Run",
-    "git-widget-placeholder": "bogdan__stevanovic",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
@@ -86,7 +94,7 @@
       <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="playwright-internship" />
       <method v="2">
@@ -125,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCasesPageTests.testDeleteAllTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.failingTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +142,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestCasesPageTests" />
-      <option name="METHOD_NAME" value="testDeleteAllTestCases" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="METHOD_NAME" value="failingTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml" />
+        <item itemvalue="TestNG.LoginTests.failingTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.tests" />
         <item itemvalue="TestNG.LoginTests" />
-        <item itemvalue="TestNG.TestCasesPageTests.testDeleteAllTestCases" />
-        <item itemvalue="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml" />
       </list>
     </recent_temporary>
   </component>

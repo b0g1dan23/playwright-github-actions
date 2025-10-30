@@ -34,7 +34,6 @@ public class TestCasesPage extends LoggedInPage{
     @Override
     public void goTo() {
         Allure.step("Opening Test cases page");
-        takeScreenshot("testcases-navigate");
         safeNavigate(pageURL);
     }
 
@@ -45,11 +44,9 @@ public class TestCasesPage extends LoggedInPage{
             noContent_locator.waitFor(new Locator.WaitForOptions()
                     .setState(WaitForSelectorState.VISIBLE)
                     .setTimeout(2000));
-            takeScreenshot("testcases-get-all-no-content");
             return new ArrayList<>();
         } catch (PlaywrightException e) {
             waitForVisible(portraitGrid, 1000);
-            takeScreenshot("testcases-get-all");
             return portraitGrid.locator("a.preview-card").all();
         }
     }
@@ -91,7 +88,6 @@ public class TestCasesPage extends LoggedInPage{
                 safeLocatorClick(addNewStep_btn);
             }
         }
-        takeScreenshot("testcases-fill-form");
     }
 
     public void createNewTestCase(String title,String description, String expectedResult){
@@ -103,7 +99,6 @@ public class TestCasesPage extends LoggedInPage{
         }
         fillCreationForm(title, description, expectedResult, steps);
         safeLocatorClick(submit_btn);
-        takeScreenshot("testcases-new-title");
     }
 
     public String deleteCase() throws Exception {
@@ -116,7 +111,6 @@ public class TestCasesPage extends LoggedInPage{
         Locator confirmDeleteBtn = getRemoveTestCaseButtonPopup();
         safeLocatorClick(confirmDeleteBtn);
 
-        takeScreenshot("testcases-delete-case");
         return caseID;
     }
 

@@ -4,7 +4,10 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.PlaywrightException;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.options.WaitForSelectorState;
+import io.qameta.allure.Attachment;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 import java.nio.file.Paths;
@@ -28,7 +31,6 @@ public abstract class BasePage {
             page.waitForSelector(selector);
             page.fill(selector, text);
         } catch (PlaywrightException e) {
-            takeScreenshot("fill_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to fill: " + selector, e);
         }
     }
@@ -38,7 +40,6 @@ public abstract class BasePage {
             locator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             locator.click();
         } catch (PlaywrightException e) {
-            takeScreenshot("locator_click_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to click on locator", e);
         }
     }
@@ -62,7 +63,6 @@ public abstract class BasePage {
             locator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             locator.click();
         } catch (PlaywrightException e) {
-            takeScreenshot("scroll_click_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to scroll and click", e);
         }
     }
@@ -72,7 +72,6 @@ public abstract class BasePage {
             locator.first().waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             return locator.allTextContents();
         } catch (PlaywrightException e) {
-            takeScreenshot("locator_all_text_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to get all texts from locator", e);
         }
     }
@@ -82,7 +81,6 @@ public abstract class BasePage {
             page.waitForSelector(selector);
             page.click(selector);
         } catch (PlaywrightException e) {
-            takeScreenshot("click_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to click: " + selector, e);
         }
     }
@@ -92,15 +90,10 @@ public abstract class BasePage {
             page.navigate(url);
             page.waitForURL(actualUrl -> actualUrl.contains("sandbox"));
         } catch (PlaywrightException e) {
-            takeScreenshot("click_failure_" + System.currentTimeMillis());
             throw new RuntimeException("Failed to navigate to: " + url, e);
         }
     }
 
-    protected void takeScreenshot(String name) {
-        page.screenshot(new Page.ScreenshotOptions()
-            .setPath(Paths.get("screenshots/" + name + ".png")));
-    }
 
     public String getCurrentUrl() {
         return page.url();

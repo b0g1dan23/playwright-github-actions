@@ -58,7 +58,7 @@ public class LoginPage extends BasePage {
     public void loginExpectSuccess(String username, String password) {
         try {
             fillLoginFormWithLocators(username, password);
-            page.waitForSelector(DASHBOARD_SELECTOR, new Page.WaitForSelectorOptions().setTimeout(DEFAULT_TIMEOUT));
+            page.waitForSelector(DASHBOARD_SELECTOR, new Page.WaitForSelectorOptions().setTimeout(1000));
         } catch (Exception e) {
             Assert.fail("Login success flow failed: " + e.getMessage());
         }
@@ -85,7 +85,6 @@ public class LoginPage extends BasePage {
         }
         catch (Exception e) {
             Assert.fail("Login form flow failed: " + e.getMessage());
-            takeScreenshot("Login form flow failed: " + e.getMessage());
         }
     }
 

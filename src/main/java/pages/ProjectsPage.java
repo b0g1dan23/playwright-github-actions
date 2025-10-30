@@ -33,13 +33,11 @@ public class ProjectsPage extends LoggedInPage{
     public void goTo() {
         Allure.step("Opening projects page");
         page.navigate(pageURL);
-        takeScreenshot("projects-navigate");
     }
 
     private void openCreateModal(){
         Allure.step("Opening create project modal");
         safeLocatorClick(addNew_btn);
-        takeScreenshot("projects-open-modal");
     }
 
     private String createProjectTitle() {
@@ -48,7 +46,6 @@ public class ProjectsPage extends LoggedInPage{
         Allure.step("Submitting project title: " + projectsTitle);
         safeFill("input[name='title']", projectsTitle);
         safeLocatorClick(title_submit_btn);
-        takeScreenshot("projects-submit-title");
         return projectsTitle;
     }
 
