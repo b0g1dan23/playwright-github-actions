@@ -5,6 +5,7 @@ import base.TestBase;
 import com.microsoft.playwright.Locator;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
+import io.qameta.allure.model.Status;
 import org.testng.annotations.Test;
 import pages.TestCasesPage;
 
@@ -36,6 +37,7 @@ public class TestCasesPageTests extends TestBase {
                     testCasesAsserts.assertToastMessage(testCasesPage.getSuccessToast(),"Successful toast must be shown after deletion of test case");
                 }
             } catch (Exception e) {
+                Allure.step("Failed to delete a case", Status.FAILED);
                 testCasesAsserts.assertFailedDeletion(e);
             }
         }

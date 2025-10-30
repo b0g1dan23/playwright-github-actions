@@ -3,6 +3,7 @@ package pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 
 import java.util.List;
 
@@ -20,8 +21,8 @@ public class DashboardPage extends LoggedInPage {
 
     @Override
     public void goTo() {
-        Allure.step("Opening Dashboard page");
         safeNavigate(pageURL);
+        Allure.step("Opening Dashboard page", Status.PASSED);
     }
 
     public List<Locator> getCardsFromGrid(){

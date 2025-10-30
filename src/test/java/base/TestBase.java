@@ -6,6 +6,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Tracing;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.model.Status;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import io.qameta.allure.Allure;
@@ -36,7 +37,7 @@ public class TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(ITestResult result) {
         page = browser.newPage();
-        Allure.step("Opening new page");
+        Allure.step("Opened new page", Status.PASSED);
         page.context().tracing().start(new Tracing.StartOptions()
             .setScreenshots(true)
             .setSnapshots(true)

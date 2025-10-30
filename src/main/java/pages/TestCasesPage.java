@@ -5,6 +5,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.PlaywrightException;
 import com.microsoft.playwright.options.WaitForSelectorState;
 import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +34,8 @@ public class TestCasesPage extends LoggedInPage{
 
     @Override
     public void goTo() {
-        Allure.step("Opening Test cases page");
         safeNavigate(pageURL);
+        Allure.step("Opened Test cases page", Status.PASSED);
     }
 
     public List<Locator> getAllTestCases() {
@@ -44,9 +45,11 @@ public class TestCasesPage extends LoggedInPage{
             noContent_locator.waitFor(new Locator.WaitForOptions()
                     .setState(WaitForSelectorState.VISIBLE)
                     .setTimeout(2000));
+            Allure.step("Got empty content", Status.BROKEN);
             return new ArrayList<>();
         } catch (PlaywrightException e) {
             waitForVisible(portraitGrid, 1000);
+            Allure.step("Locating preview cards", Status.PASSED);
             return portraitGrid.locator("a.preview-card").all();
         }
     }
@@ -88,6 +91,7 @@ public class TestCasesPage extends LoggedInPage{
                 safeLocatorClick(addNewStep_btn);
             }
         }
+        Allure.step("Filled out creation form", Status.PASSED);
     }
 
     public void createNewTestCase(String title,String description, String expectedResult){
@@ -111,6 +115,7 @@ public class TestCasesPage extends LoggedInPage{
         Locator confirmDeleteBtn = getRemoveTestCaseButtonPopup();
         safeLocatorClick(confirmDeleteBtn);
 
+        Allure.step("Deleted test case with ID: "+caseID, Status.PASSED);
         return caseID;
     }
 

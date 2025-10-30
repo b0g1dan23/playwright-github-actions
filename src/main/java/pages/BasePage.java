@@ -4,7 +4,9 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.PlaywrightException;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.options.WaitForSelectorState;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.model.Status;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -31,6 +33,7 @@ public abstract class BasePage {
             page.waitForSelector(selector);
             page.fill(selector, text);
         } catch (PlaywrightException e) {
+            Allure.step("Failed to fill", Status.FAILED);
             throw new RuntimeException("Failed to fill: " + selector, e);
         }
     }
@@ -40,6 +43,7 @@ public abstract class BasePage {
             locator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             locator.click();
         } catch (PlaywrightException e) {
+            Allure.step("Failed to click on locator", Status.FAILED);
             throw new RuntimeException("Failed to click on locator", e);
         }
     }
@@ -63,6 +67,7 @@ public abstract class BasePage {
             locator.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             locator.click();
         } catch (PlaywrightException e) {
+            Allure.step("Failed to scroll and click", Status.FAILED);
             throw new RuntimeException("Failed to scroll and click", e);
         }
     }
@@ -72,6 +77,7 @@ public abstract class BasePage {
             locator.first().waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(2000));
             return locator.allTextContents();
         } catch (PlaywrightException e) {
+            Allure.step("Failed to get all text from locator", Status.FAILED);
             throw new RuntimeException("Failed to get all texts from locator", e);
         }
     }
@@ -81,6 +87,7 @@ public abstract class BasePage {
             page.waitForSelector(selector);
             page.click(selector);
         } catch (PlaywrightException e) {
+            Allure.step("Failed to click", Status.FAILED);
             throw new RuntimeException("Failed to click: " + selector, e);
         }
     }
@@ -90,6 +97,7 @@ public abstract class BasePage {
             page.navigate(url);
             page.waitForURL(actualUrl -> actualUrl.contains("sandbox"));
         } catch (PlaywrightException e) {
+            Allure.step("Failed to navigate", Status.FAILED);
             throw new RuntimeException("Failed to navigate to: " + url, e);
         }
     }

@@ -28,6 +28,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Create credentials.properties
+        run: |
+          mkdir -p src/main/resources
+          echo "validUser1=${{ secrets.VALIDUSER1 }}" > src/main/resources/credentials.properties
+          echo "validPass1=${{ secrets.VALIDPASS1 }}" >> src/main/resources/credentials.properties
+          echo "baseUrl=${{ secrets.BASEURL }}" >> src/main/resources/credentials.properties
+
       - name: Run tests
         run: mvn clean test
 

@@ -4,6 +4,7 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
 import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 
 import java.util.List;
 import java.util.Objects;
@@ -31,21 +32,21 @@ public class ProjectsPage extends LoggedInPage{
 
     @Override
     public void goTo() {
-        Allure.step("Opening projects page");
         page.navigate(pageURL);
+        Allure.step("Opened projects page",Status.PASSED);
     }
 
     private void openCreateModal(){
-        Allure.step("Opening create project modal");
         safeLocatorClick(addNew_btn);
+        Allure.step("Opening create project modal", Status.PASSED);
     }
 
     private String createProjectTitle() {
         openCreateModal();
         String projectsTitle = "Project " + ThreadLocalRandom.current().nextInt(1, 1_000);
-        Allure.step("Submitting project title: " + projectsTitle);
         safeFill("input[name='title']", projectsTitle);
         safeLocatorClick(title_submit_btn);
+        Allure.step("Submitting project title: " + projectsTitle, Status.PASSED);
         return projectsTitle;
     }
 
@@ -56,7 +57,7 @@ public class ProjectsPage extends LoggedInPage{
     }
 
     public String getExistingPersonName() {
-        Allure.step("Getting a random existing person's name");
+        Allure.step("INFO: Getting a random existing person's name");
 
         Locator personLocator = page.locator("div.person-container-bottom--teams-people--person-name");
 
@@ -68,6 +69,7 @@ public class ProjectsPage extends LoggedInPage{
             throw new RuntimeException("No person names found on the page.");
         }
 
+        Allure.step("Got a random existing person's name", Status.PASSED);
         int randIdx = ThreadLocalRandom.current().nextInt(personNames.size());
         return personNames.get(randIdx);
     }
@@ -79,6 +81,7 @@ public class ProjectsPage extends LoggedInPage{
         Allure.step("Filling out the form with existing persons' name");
         person_name_input.fill(name);
         person_submit_btn.click();
+        Allure.step("Filled out the form with existing persons' name", Status.PASSED);
     }
 
     public void createProjectExistingPerson(){
@@ -98,6 +101,7 @@ public class ProjectsPage extends LoggedInPage{
         safeLocatorClick(selectAll);
         safeScrollAndClick(people_submit_btn);
         page.goBack();
+        Allure.step("Added people on project", Status.PASSED);
         return selectedNames;
     }
 
@@ -114,6 +118,8 @@ public class ProjectsPage extends LoggedInPage{
                 return card;
             }
         }
+
+        Allure.step("Found project with title: " + title, Status.PASSED);
         return null;
     }
 
@@ -127,6 +133,7 @@ public class ProjectsPage extends LoggedInPage{
         Locator peopleLocator = page.locator("div.modal-body div.project-container-bottom--teams-people--person-name");
 
         waitForVisible(peopleLocator.first(), 1000);
+        Allure.step("Got all person names from modal", Status.PASSED);
         return safeGetAllTextFromLocator(peopleLocator);
     }
 }
