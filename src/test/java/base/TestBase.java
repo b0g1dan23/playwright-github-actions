@@ -24,7 +24,7 @@ public class TestBase {
     @BeforeSuite(alwaysRun = true)
     public static void setupClass() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
     }
 
     @AfterSuite(alwaysRun = true)
