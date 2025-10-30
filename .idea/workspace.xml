@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f03435-b7b4-428f-a591-d504ddf56c8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test-allure.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test-allure.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml">
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="playwright-internship" />
       <method v="2">
@@ -173,9 +171,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml" />
         <item itemvalue="TestNG.LoginTests.failingTest" />
-        <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.tests" />
         <item itemvalue="TestNG.LoginTests" />
       </list>
