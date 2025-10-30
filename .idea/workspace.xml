@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21f03435-b7b4-428f-a591-d504ddf56c8c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestBase.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="34SdlCWL6ehuFbJ63hxwDygPNyS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Maven.Test [allure:serve].executor": "Run",
+    "Maven.Test [clean,install].executor": "Run",
+    "Maven.Test [clean,test].executor": "Run",
+    "Maven.Test [clean].executor": "Run",
+    "Maven.Test [install].executor": "Run",
+    "Maven.Test [test,-Dgroups=Positive].executor": "Run",
+    "Maven.Test [test,-Dgroups=Smoke].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.<default>.executor": "Run",
+    "TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml.executor": "Run",
+    "TestNG.DashboardTests.executor": "Run",
+    "TestNG.DashboardTests.verifyAllLinksInCardGrid.executor": "Run",
+    "TestNG.LoginTests.executor": "Run",
+    "TestNG.LoginTests.testValidLogin.executor": "Run",
+    "TestNG.ProjectsPageTests.executor": "Run",
+    "TestNG.ProjectsPageTests.testAddAllPersonsIntoFirstProject.executor": "Run",
+    "TestNG.ProjectsPageTests.testCreateNewProjectExistingPeople.executor": "Run",
+    "TestNG.TestCasesPageTests.deleteAllPresentTestCases.executor": "Debug",
+    "TestNG.TestCasesPageTests.executor": "Run",
+    "TestNG.TestCasesPageTests.testCreateNewTestCase.executor": "Run",
+    "TestNG.TestCasesPageTests.testCreatingExistingTextCase.executor": "Run",
+    "TestNG.TestCasesPageTests.testDeleteAllTestCases.executor": "Run",
+    "TestNG.TestCasesPageTests.verifyCreateNewTestCase.executor": "Run",
+    "TestNG.tests.executor": "Run",
+    "git-widget-placeholder": "bogdan__stevanovic",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BogdanStevanovic\Documents\playwright-internship\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn allure:serve" />
+      <command value="allure generate ./allure-results --clean -o allure-report" />
+      <command value="mvn install" />
+      <command value="mvn clean install" />
+      <command value="mvn test -Dgroups=Smoke" />
+      <command value="mvn test -Dgroups=Positive" />
+      <command value="mvn clean test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="playwright-internship" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="playwright-internship" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestSuite.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCasesPageTests.testDeleteAllTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestCasesPageTests" />
+      <option name="METHOD_NAME" value="testDeleteAllTestCases" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.LoginTests" />
+        <item itemvalue="TestNG.TestCasesPageTests.testDeleteAllTestCases" />
+        <item itemvalue="TestNG.C:/Users/BogdanStevanovic/Documents/playwright-internship/src/test/resources/TestSuite.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21f03435-b7b4-428f-a591-d504ddf56c8c" name="Changes" comment="" />
+      <created>1761211056832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761211056832</updated>
+    </task>
+    <servers />
+  </component>
+</project>
