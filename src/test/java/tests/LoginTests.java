@@ -11,7 +11,7 @@ import static utils.ConfigReader.*;
 
 public class LoginTests extends TestBase {
 
-    @Test(groups = {"Smoke", "UI"}
+    @Test(groups = {"Smoke", "UI", "Credentials"}
     )
     @Description("Verify successful login with valid credentials")
     public void testValidLogin() {

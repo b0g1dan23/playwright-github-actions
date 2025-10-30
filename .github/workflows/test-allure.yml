@@ -35,6 +35,9 @@ jobs:
           echo "validPass1=${{ secrets.VALIDPASS1 }}" >> src/main/resources/credentials.properties
           echo "baseUrl=${{ secrets.BASEURL }}" >> src/main/resources/credentials.properties
 
+      - name: Run login test to generate tokens
+        run: mvn test -Dgroups=Credentials
+
       - name: Run tests
         run: mvn clean test
 
