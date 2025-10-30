@@ -42,13 +42,14 @@ jobs:
         run: mvn clean test
         continue-on-error: true
 
+      - name: Install Allure CLI via NPM
+        run: npm install -g allure-commandline --save-dev
+
       - name: Generate Allure report
-        run: |
-          allure generate target/allure-results --clean -o target/allure-report
-          ls -R target/allure-report
+        run: npx allure generate allure-results --clean -o target/allure-report
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: allure-report
+          path: target/allure-report

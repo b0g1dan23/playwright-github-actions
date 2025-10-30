@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21f03435-b7b4-428f-a591-d504ddf56c8c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test-allure.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test-allure.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
